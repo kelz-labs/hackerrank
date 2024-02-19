@@ -10,11 +10,38 @@ const btnSub = document.getElementById("btnSub");
 const btnMul = document.getElementById("btnMul");
 const btnDiv = document.getElementById("btnDiv");
 
-btn0.addEventListener("click", () => {});
-btn1.addEventListener("click", () => {});
-btnClr.addEventListener("click", () => {});
-btnEql.addEventListener("click", () => {});
-btnSum.addEventListener("click", () => {});
-btnSub.addEventListener("click", () => {});
-btnMul.addEventListener("click", () => {});
-btnDiv.addEventListener("click", () => {});
+let showedResult = [];
+let totalClick = 0;
+
+btn0.addEventListener("click", () => {
+  res.innerHTML += 0;
+});
+
+btn1.addEventListener("click", () => {
+  res.innerHTML += 1;
+});
+
+btnClr.addEventListener("click", () => {
+  res.innerHTML = "";
+});
+
+btnEql.addEventListener("click", () => {
+  const result = eval(res.innerHTML.toString());
+  res.innerHTML = result;
+});
+
+btnSum.addEventListener("click", () => {
+  res.innerHTML += "+";
+});
+
+btnSub.addEventListener("click", () => {
+  res.innerHTML += "-";
+});
+
+btnMul.addEventListener("click", () => {
+  res.innerHTML += "*";
+});
+
+btnDiv.addEventListener("click", () => {
+  res.innerHTML += "/";
+});
